@@ -1,0 +1,19 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #121212; 
+}
+
+#navbar h2 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#navbar h2 span {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 6px;
+}
