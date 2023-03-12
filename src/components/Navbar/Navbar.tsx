@@ -9,10 +9,8 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <h2>
-        <Link to="/">
-          
+        <Link to="/">        
           <span>Detalhe Filmes</span>
-
         </Link>
       </h2>
     </nav>
