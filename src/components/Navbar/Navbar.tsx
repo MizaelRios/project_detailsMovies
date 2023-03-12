@@ -10,7 +10,9 @@ const Navbar = () => {
     <nav id="navbar">
       <h2>
         <Link to="/">
+          
           <span>Detalhe Filmes</span>
+
         </Link>
       </h2>
     </nav>

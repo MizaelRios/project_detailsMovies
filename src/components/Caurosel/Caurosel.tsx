@@ -1,25 +1,24 @@
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, EffectCoverflow, Autoplay } from 'swiper';
-
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import '../Caurosel/Caurosel.css';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, EffectCoverflow, Autoplay } from 'swiper';
 import { MovieService } from '../../services/MovieService';
-import { useEffect, useRef, useState } from 'react';
-import { IMovie,Result } from '../../interfaces';
+import { useEffect, useState } from 'react';
+import { IMovie } from '../../interfaces';
 
 const Carousel = () => {
-  const [movies, setMovies] = useState<any[]>([]);
+  const [movies, setMovies] = useState<IMovie>();
+
   useEffect(() => {
     (async () => {
       const { status, data } = await MovieService.getTopMovies();
-      setMovies(data.results);
+      setMovies(data);
       if (status === 200)
         console.log(data); 
     })(); 
   }, [])
-
 
   return (
     <div className='carousel'>
@@ -60,10 +59,10 @@ const Carousel = () => {
 
       >
         {
-          movies.map(movie => (
+          movies?.results.map(movie => (
             <SwiperSlide
               key={movie.id}
-              style={{ backgroundImage: `url(${'https://image.tmdb.org/t/p/w500' + movie.poster_path})` }}
+              style={{ backgroundImage: `url(${import.meta.env.VITE_URL_IMAGE + movie.poster_path})` }}
               className="myswiper-slider">
             </SwiperSlide>
           ))
