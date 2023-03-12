@@ -1,19 +1,126 @@
-#navbar {
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header {
+    /* background: var(--white); */
+    background: #ffffff0d;
+    height: 4rem;
+}
+
+.navigation {
+    height: 4rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #121212; 
 }
 
-#navbar h2 {
+.logo {
+    width: 8rem;
+}
+
+.logo:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.mobile_menu_icon {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile_menu_icon ion-icon {
+    font-size: 4rem;
+}
+
+.nav_list {
+    display: inline-flex;
+    margin: 0 1.5rem;
+}
+
+.nav_link {
+    font-weight: 500;
+    color: var(--text);
+    padding: 0.6rem 1.7rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in;
+}
+
+.nav_link.active {
+    transition: all 0.5s ease-in;
+    background: rgb(97, 62, 236);
+    color: var(--white);
+}
+
+section {
+    height: calc(100vh - 6rem);
     display: flex;
     align-items: center;
-    gap: .5rem;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--text);
 }
 
-#navbar h2 span {
+@media (max-width:768px) {
+    .mobile_menu_icon {
+        display: block;
+    }
+
+    .nav_menu {
+        padding: 3rem 0;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 6rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in;
+    }
+
+    .nav_list {
+        margin: 3rem 0;
+        display: block;
+        text-align: center;
+    }
+
+    .nav_menu.active {
+        transition: all 0.5s ease-in;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#form {
+    display: flex;
+    gap: .5rem
+}
+
+#form input {
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#form button {
+    background-color: #fffefe00;
+    border: #ffffff00;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#icon-search {
+    color: #ffffff;
+}
+
+#form #icon-search:hover {
     color: #fff;
-    font-size: 20px;
-    margin-top: 6px;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }

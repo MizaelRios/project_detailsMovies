@@ -16,12 +16,13 @@ const Carousel = () => {
       const { status, data } = await MovieService.getTopMovies();
       setMovies(data);
       if (status === 200)
-        console.log(data); 
-    })(); 
+        console.log(data);
+    })();
   }, [])
 
   return (
     <div className='carousel'>
+      <h1>Melhores Filmes Avaliados</h1>
       <Swiper
         className='myswiper'
         modules={[Pagination, EffectCoverflow, Autoplay]}

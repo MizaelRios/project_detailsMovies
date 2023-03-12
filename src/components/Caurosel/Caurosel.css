@@ -8,9 +8,12 @@
     padding-block: min(20vh, 3rem);
 }
 
+.carousel h1{
+    text-align: center;
+}
+
 @media screen and (min-width: 48rem) {
     .carousel {
-        display: flex;
         align-items: center;
     }
 }
