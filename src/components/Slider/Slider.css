@@ -1,0 +1,17 @@
+.slider {
+    position: relative;
+    width: calc(min(90rem, 40%));
+    margin: 0 auto;
+    min-height: 100vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 0rem);
+}
+
+.mySlider {
+    width: 75%;
+    padding-top: 3.125rem;
+}
+
+img{
+    width: 100%;
+}

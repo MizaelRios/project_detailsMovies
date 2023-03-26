@@ -21,55 +21,52 @@ const Carousel = () => {
   }, [])
 
   return (
-    <div className='carousel'>
-      <h1>Melhores Filmes Avaliados</h1>
-      <Swiper
-        className='myswiper'
-        modules={[Pagination, EffectCoverflow, Autoplay]}
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 3,
-          slideShadows: true
-        }}
-        loop={true}
-        pagination={{ clickable: true }}
+    <Swiper
+      className='myswiper'
+      modules={[EffectCoverflow, Autoplay]}
+      effect={"coverflow"}
+      grabCursor={true}
+      centeredSlides={true}
+      coverflowEffect={{
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true
+      }}
+      loop={true}
+      pagination={{ clickable: true }}
 
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 2
-          },
-          768: {
-            slidesPerView: 1
-          },
-          1024: {
-            slidesPerView: 2
-          },
-          1560: {
-            slidesPerView: 3
-          },
-        }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 2
+        },
+        768: {
+          slidesPerView: 1
+        },
+        1024: {
+          slidesPerView: 2
+        },
+        1560: {
+          slidesPerView: 3
+        },
+      }}
 
-      >
-        {
-          movies?.results.map(movie => (
-            <SwiperSlide
-              key={movie.id}
-              style={{ backgroundImage: `url(${import.meta.env.VITE_URL_IMAGE + movie.poster_path})` }}
-              className="myswiper-slider">
-            </SwiperSlide>
-          ))
-        }
-      </Swiper>
-    </div>
+    >
+      {
+        movies && movies?.results?.map(movie => (
+          <SwiperSlide
+            key={movie.id}
+            style={{ backgroundImage: `url(${import.meta.env.VITE_URL_IMAGE + movie.poster_path})` }}
+            className="myswiper-slider">
+          </SwiperSlide>
+        ))
+      }
+    </Swiper>
   )
 }
 

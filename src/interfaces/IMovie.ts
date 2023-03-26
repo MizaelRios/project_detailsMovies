@@ -1,11 +1,11 @@
 export interface IMovie {
-    page: number;
-    results: Result[];
-    total_pages: number;
-    total_results: number;
+    page?: number;
+    results?: IResult[];
+    total_pages?: number;
+    total_results?: number;
 }
 
-export interface Result {
+export interface IResult {
     adult: boolean;
     backdrop_path: string;
     genre_ids: number[];

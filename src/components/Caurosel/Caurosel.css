@@ -1,51 +1,13 @@
-
-.carousel {
-    position: relative;
-    width: calc(min(90rem, 90%));
-    margin: 0 auto;
-    min-height: 100vh;
-    column-gap: 3rem;
-    padding-block: min(20vh, 3rem);
-}
-
-.carousel h1{
-    text-align: center;
-}
-
-@media screen and (min-width: 48rem) {
-    .carousel {
-        align-items: center;
-    }
-}
-
-.slider-btn {
-    display: inline-block;
-    color: #717171;
-    background: #fff;
-    padding: 0.625rem 1.875rem;
-    margin-top: 2.125rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: 2px solid #c2c2c2;
-    border-radius: 3.125rem;
-    transition: 0.3s ease-in-out;
-}
-
-.slider-btn:hover {
-    border: 0.125rem solid #00a4aa;
-    color: #00a4aa;
-}
-
 .myswiper {
-    width: 75%;
+    width: 100%;
     padding-top: 3.125rem;
 }
 
 .myswiper-slider {
     width: 18.75rem;
     height: 28.125rem;
+    background-size: cover;
     background-position: center;
-    background-size: 456px 450px;
 }
 
 .myswiper-slider div {
