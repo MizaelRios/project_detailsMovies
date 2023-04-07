@@ -1,6 +1,6 @@
 .myswiper {
     width: 100%;
-    padding-top: 3.125rem;
+    padding-top: 1.5rem;
 }
 
 .myswiper-slider {
@@ -32,7 +32,7 @@
 .myswiper-slider h2 {
     color: #fff;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     line-height: 1.4;
     margin-bottom: 0.625rem;
     padding: 0 0 0 1.563rem;

@@ -1,0 +1,37 @@
+.footer {
+    background: #ffffff0d;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    display: grid;
+    margin-top: 1.6rem;
+}
+
+.social_list {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.social_list span {
+    margin: 0 3em;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.social_list svg {
+    margin: 0 3em;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.social_list svg:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+p{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}

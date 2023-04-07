@@ -30,9 +30,7 @@ const Navbar = () => {
       <div className="container">
         <nav className="navigation">
           <Link to="/">
-            <div className="navigation-logo">
-              <img src={logo} alt="Logo" className="logo" />
-            </div>
+            <img src={logo} alt="Logo" className="logo" />
           </Link>
           <div className="mobile_menu_icon" onClick={handle}>
             <AiOutlineMenu
@@ -55,7 +53,7 @@ const Navbar = () => {
                 TV
               </NavLink>
             </li>
-            <li className={click ? 'nav_list' : 'nav_list_form'}>
+            <li className="nav_list">
               <form className="nav_link" id="form" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Busque pelo seu filme"
                   onChange={(e) => setSearch(e.target.value)} value={search} />
